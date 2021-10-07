@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="prueba.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+				<List
+							id="emplist"
+							items="{/character}"
+							headerText="Personajes"
+							headerDesign="Standard"
+							footerText="End of the List"
+							noDataText="No Characters"
+							showNoData="true">
+							<items>
+								<StandardListItem type="Active" title="{name}" description="{status}" icon="{image}" press=".onItemPres"></StandardListItem>
+							</items>
+						</List>
+						<ObjectHeader id="objectid"
+						title="{name}"
+						intro="{status}"
+						icon="{image}"
+						
+						>
+						<ObjectAttribute text=" {gender}" />
+						<ObjectAttribute text=" {specie}" />
+						<ObjectAttribute text=" {location}" />	
+							</ObjectHeader>
+						
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
